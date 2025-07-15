@@ -20,19 +20,19 @@ const handleLogout = () => {
 
 
     return (
-        <nav className="navbar">
+       <nav className="navbar">
             <Link to="/">To-Do List App</Link>
             {username ? (
                 <>
-                    <span style={{ marginLeft: '900px', marginRight: '0px' }}>Hello, {username}</span>
-                    <button onClick={handleLogout} > Log Out </button>
-
-
+                <span className="username">Hello, {username}</span>
+                <button onClick={handleLogout}>Log Out</button>
                 </>
             ) : (
-                <button style={{ marginLeft: 'auto' }} onClick={() => history.push('/signin')}>Sign In</button>
+                <button onClick={() => history.push('/signin')}>Sign In</button>
             )}
         </nav>
+
+
     );
 };
 
